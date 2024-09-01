@@ -6,6 +6,7 @@ import {
   InvoicesTable,
   LatestInvoiceRaw,
   Revenue,
+  Customer
 } from './definitions';
 import { formatCurrency } from './utils';
 
@@ -168,24 +169,6 @@ export async function fetchInvoiceById(id: string) {
   }
 }
 
-export async function fetchCustomers() {
-  try {
-    const data = await sql<CustomerField>`
-      SELECT
-        id,
-        name
-      FROM customers
-      ORDER BY name ASC
-    `;
-
-    const customers = data.rows;
-    return customers;
-  } catch (err) {
-    console.error('Database Error:', err);
-    throw new Error('Failed to fetch all customers.');
-  }
-}
-
 export async function fetchFilteredCustomers(query: string) {
   try {
     const data = await sql<CustomersTableType>`
@@ -216,5 +199,29 @@ export async function fetchFilteredCustomers(query: string) {
   } catch (err) {
     console.error('Database Error:', err);
     throw new Error('Failed to fetch customer table.');
+  }
+}
+
+export async function fetchCustomers(): Promise<Customer[]> {
+  try {
+    const data = await sql<Customer>`
+      SELECT
+        c.id,
+        c.name,
+        c.email,
+        c.image_url,
+        SUM(i.amount) AS total_invoices,
+        SUM(CASE WHEN i.status = 'paid' THEN i.amount ELSE 0 END) AS total_paid,
+        SUM(CASE WHEN i.status = 'pending' THEN i.amount ELSE 0 END) AS total_pending
+      FROM customers c
+      LEFT JOIN invoices i ON c.id = i.customer_id
+      GROUP BY c.id
+      ORDER BY c.name ASC
+    `;
+
+    return data.rows;
+  } catch (err) {
+    console.error('Database Error:', err);
+    throw new Error('Failed to fetch all customers.');
   }
 }
