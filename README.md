@@ -26,6 +26,9 @@ For visitors, you can use the following credentials to log in:
 14. [Improving Accessibility](#chapter-14-improving-accessibility)
 15. [Adding Authentication](#chapter-15-adding-authentication)
 16. [Adding Metadata](#chapter-16-adding-metadata)
+17. [Project Layout](#project-layout)
+18. [Database Schema](#database-schema)
+19. [Conlusion](#conclusion)
 
 ## Chapter 1: Cloning the Boilerplate and Installation
 
