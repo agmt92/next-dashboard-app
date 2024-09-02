@@ -10,22 +10,22 @@ For visitors, you can use the following credentials to log in:
 
 ## Table of Contents
 
-1. [Cloning the Boilerplate and Installation](#chapter-1)
-2. [CSS Styling](#chapter-2)
-3. [Optimizing Fonts and Images](#chapter-3)
-4. [Creating Layouts and Pages](#chapter-4)
-5. [Navigating Between Pages](#chapter-5)
-6. [Setting Up Your Database](#chapter-6)
-7. [Fetching Data](#chapter-7)
-8. [Static and Dynamic Rendering](#chapter-8)
-9. Streaming
-10. [Partial Prerendering](#chapter-10)
-11. [Adding Search and Pagination](#chapter-11)
-12. [Mutating Data](#chapter-12)
-13. [Handling Errors](#chapter-13)
-14. [Improving Accessibility](#chapter-14)
-15. [Adding Authentication](#chapter-15)
-16. [Adding Metadata](#chapter-16)
+1. [Cloning the Boilerplate and Installation](#chapter-1-cloning-the-boilerplate-and-installation)
+2. [CSS Styling](#chapter-2-css-styling)
+3. [Optimizing Fonts and Images](#chapter-3-optimizing-fonts-and-images)
+4. [Creating Layouts and Pages](#chapter-4-creating-layouts-and-pages)
+5. [Navigating Between Pages](#chapter-5-navigating-between-pages)
+6. [Setting Up Your Database](#chapter-6-setting-up-your-database)
+7. [Fetching Data](#chapter-7-fetching-data)
+8. [Static and Dynamic Rendering](#chapter-8-static-and-dynamic-rendering)
+9. [Streaming](#chapter-9-streaming)
+10. [Partial Prerendering](#chapter-10-partial-prerendering)
+11. [Adding Search and Pagination](#chapter-11-adding-search-and-pagination)
+12. [Mutating Data](#chapter-12-mutating-data)
+13. [Handling Errors](#chapter-13-handling-errors)
+14. [Improving Accessibility](#chapter-14-improving-accessibility)
+15. [Adding Authentication](#chapter-15-adding-authentication)
+16. [Adding Metadata](#chapter-16-adding-metadata)
 
 ## Chapter 1: Cloning the Boilerplate and Installation
 
