@@ -151,7 +151,7 @@ nextjs-dashboard/
 
 ## Database Schema
 
-The database schema includes tables for `customers`, `invoices`, and `revenue`. The SQL queries for interacting with these tables are defined in `app/lib/data.ts`.
+The database schema includes tables for `customers`, `invoices`, and `revenue`. The SQL queries for interacting with these tables are defined in `app/lib/data.ts` and in `app/lib/actions.ts`
 
 ## Conclusion
 
